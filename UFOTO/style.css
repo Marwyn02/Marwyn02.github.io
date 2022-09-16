@@ -58,6 +58,10 @@ nav {
     display: block;
 }
 
+#introSmallImage {
+    width: 100vw;
+}
+
 .img-intro {
     width: 100vw;
     background-position: center;
@@ -68,7 +72,7 @@ nav {
 
 #intro-image-first {
     /* transition: all 0.3s ease-out; */
-    animation-duration: 6s;
+    animation-duration: 4s;
     animation-name: popin;
     
 }
@@ -208,3 +212,36 @@ button:focus {
     transition: .3s ease-out;
 }
 
+#contact-background {
+    background-image: url('./public/utility-images/intro-image.jpeg');
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media screen and (max-width: 620px) {
+    #contact-background, #booking-background {
+        height: 250px;
+        background-position: 0px;
+    }
+}
+
+#intro-background {
+    background-image: url('./public/utility-images/intro-image.jpeg');
+    height: 700px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#booking-background {
+    background-image: url('./public/utility-images/booking-img.jpeg');
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
