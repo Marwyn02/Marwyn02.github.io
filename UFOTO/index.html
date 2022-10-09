@@ -1,545 +1,509 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>UFOTO Self-Portrait Studio</title>
-
-    <meta name="description" content="Self-portrait studio in cavite">
-
-    <!-- Meta Icon  -->
-    <link rel="icon" type="image/ico" href="./public/favicon.ico"/>
-
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="SELF PORTRAIT, PHOTOSHOOT, PHOTOGRAPHY">
-
-    <!-- Meta Author -->
-    <meta name="author" content="Jhun Marwyn Sumargo">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-    
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- Icon  -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>UFOTO Self-Portrait Studio</title>
+<meta name=description content="Self-portrait studio in cavite">
+<link rel=icon type=image/ico href="./public/favicon.ico"/>
+<meta name=keywords content="SELF PORTRAIT, PHOTOSHOOT, PHOTOGRAPHY">
+<meta name=author content="Jhun Marwyn Sumargo">
+<script src=https://cdn.tailwindcss.com></script>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor crossorigin=anonymous>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js integrity=sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 crossorigin=anonymous></script>
+<link rel=stylesheet href=style.css>
+<link href=https://unpkg.com/aos@2.3.1/dist/aos.css rel=stylesheet>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css>
+<script src=https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.js></script>
+<link href=https://api.mapbox.com/mapbox-gl-js/v2.10.0/mapbox-gl.css rel='stylesheet'/>
 </head>
 <body>
-
-<!-- Navbar  -->
-    <div class="sticky top-0 z-10">
-        <nav class="navbar navbar-expand-lg w-full d-flex flex-wrap align-items-center justify-content-start justify-content-md-center
-           hover:bg-white hover:duration-500 justify-content-md-between border-bottom py-lg-0">
-           
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                <ul class="navbar-nav d-flex col-12 col-md-3 mb-2 mb-md-0 align-items-center
-                order-2 order-sm-1 text-decoration-none uppercase pl-16 tracking-widest text-sm d-none d-lg-flex">
-                    <li>
-                        <a href="index.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300">Home</a>
-                    </li>
-                    <li>
-                        <a href="product.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300 ">Photos</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300">Contact</a>
-                    </li>
-                </ul>
-                <a href="index.html" class="text-decoration-none justify-content-center 
-                order-1 order-sm-2 col-md-auto mb-2 col-12 mb-md-0 d-none d-lg-block 
-                py-8 text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold
-                duration-300">UFOTO</a>
-                <div class="col-md-3 text-end pr-20 order-3 d-none d-lg-block">
-                    <a href="booking.html" class="uppercase py-9 link-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300 px-2
-                    text-sm tracking-widest">Book now</a>
-                </div>
-        </nav>
-    </div>
-
-    <!-- Offcanvas  -->
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header pb-0">
-          <h5 class="offcanvas-title text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold
-          duration-300 cursor-pointer" id="offcanvasExampleLabel">UFOTO</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-            <img src="./public/utility-images/Close-button2.png" alt="close-button">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <nav class="navbar py-0">
-            <ul class="navbar-nav py-1 uppercase tracking-widest text-sm">
-                <li>
-                    <a href="index.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Home</a>
-                </li>
-                <li>
-                    <a href="product.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Photos</a>
-                </li>
-                <li>
-                    <a href="contact.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Contact</a>
-                </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!-- End of Offcanvas  -->
-
-
-<!-- End of navbar  -->
-
-
-<!-- Intro image  -->
-    <figure id="intro-image-first" class="figure mb-10 -mt-14 sm:-mt-0 lg:-mt-32">
-        <div class="overlay-gradient">
-            <img src="./public/utility-images/intro-small.png" alt="..." class="d-block d-sm-none" id="introSmallImage">
-            <img src="./public/utility-images/intro-desktop.jpeg" class="img-fluid d-none d-sm-block img-intro" alt="..." id="introImage">
-        </div>
-    </figure>
-<!-- End of intro image  -->
-
-
-<!-- Intro   -->
-    <section class="container mt-12 md:mt-24 mb-5 sm:mb-2">
-        <div class="row text-center px-3">
-            <h2 class="uppercase text-2xl md:text-4xl font-bold tracking-widest text-stone-600 mb-2">Our story.</h2>
-            <h1 class="italic tracking-wide text-stone-700 mb-4">We're self-portrait studio from Cavite</h1>
-            <hr class="w-10 mx-auto mb-12">
-            <p class="text-stone-400 px-md-44">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Corrupti earum accusantium ipsa temporibus perspiciatis ullam, 
-                totam dignissimos dolor voluptates error placeat voluptatem eos nulla. 
-                Velit nobis quas quis amet suscipit!</p>
-            
-        </div>
-    </section>
-    <div class="overlay-gradient1 mt-32">
-        <!-- <img data-aos="fade-up" data-aos-duration="1000" data-aos-easing="ease-in-sine" data-aos-once="true"
-         src="./public/utility-images/intro-image.jpeg" alt="intro-image" class="img-fluid img-intro"> -->
-         <div id="intro-background"></div>
-    </div>
-<!-- End of intro  -->
-
-
-<!-- Price list  -->
-<section>
-    <div class="container text-center mt-32">
-        <h2 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">We offer.</h2>
-        <h4 class="italic tracking-wide text-stone-700 mb-4">We provide the best experiences</h4>
-        <hr class="w-10 mx-auto border-l-2 mb-12">
-    </div>
-    
-    <!-- Price lists buttons  -->
-    <section class="align-items-center mt-12">
-        <div class="col-12 justify-content-center text-center mb-5 sm:pr-0">
-            <button class="text-stone-600 border-2 border-stone-500 hover:border-stone-800 
-            rounded-full px-4 py-1.5 duration-500 uppercase text-xs mb-1" id="btn1">Self-portrait shoot</button>
-
-            <button class="text-stone-600 border-2 border-stone-100 hover:border-stone-800 
-            rounded-full px-4 py-1.5 mx-md-5 duration-500 uppercase text-xs" id="btn3">Adds on</button>
-
-            <button class="text-stone-600 border-2 border-stone-100 hover:border-stone-500 
-            rounded-full px-4 py-1.5 duration-500 uppercase text-xs" id="btn2">Studio rental</button>
-        </div>
-        <!-- End of price lists buttons  -->
-
-
-        <!-- Self portrait shoot  -->
-        <div class="container" id="selfportrait">
-            <div class="align-items-center">
-                <div class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
-                    <h1 class="text-stone-500 text-center uppercase tracking-wider">Self-Portrait Shoot</h1>
-
-                    <div class="px-4 pb-3 mx-4 mt-5 mb-3">
-                        <h4 class="font-bold text-lg">Solo Package<span class="text-center float-end pr-2 pe-lg-4">500</span></h4>
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">good for 1 pax</p>
-                            <p class="-my-1.5">15 mins shooting</p>
-                            <p>15 mins selecting</p>
-                            <p class="-my-1.5">2 photo prints</p>
-                            <p>soft copies of all prints</p>
-                        </div>
-                    </div>
-                    <div class="px-4 pb-3 mx-4 mb-3">
-                        <h4 class="font-bold text-lg">Duo Package<span class="text-center float-end pr-2 pe-lg-4">750</span></h4>
-                        <div class="text-sm font-light">
-                            <p class="-mt-2">good for 1 pax</p>
-                            <p class="-my-1.5">15 mins shooting</p>
-                            <p class="">15 mins selecting</p>
-                            <p class="-my-1.5">2 photo prints</p>
-                            <p>soft copies of all prints</p>
-                        </div>
-                    </div>
-                    <div class="px-4 pb-3 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">Group Package<span class="text-center float-end pr-2 pe-lg-4">1500</span></h4>
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">good for 1 pax</p>
-                            <p class="-my-1.5">15 mins shooting</p>
-                            <p>15 mins selecting</p>
-                            <p class="-my-1.5">2 photo prints</p>
-                            <p>soft copies of all prints</p>
-                        </div>
-                    </div>
-                    <div class="text-center leading-4 text-sm py-3 mb-6 font-light">
-                        <p>for groups exceeding 2 pax. <br>
-                        you may book the duo package <br>
-                        and just add extra heads.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End of self portrait shoot  -->
-
-
-        <!-- Studio rental  -->
-        <div class="container" id="studiorental">
-            <div class="row align-items-center">
-                <div class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
-                    <h1 class="text-stone-500 text-center uppercase tracking-wider">Studio Rental</h1>
-                    <p class="text-sm text-center font-light italic text-stone-800">for Photoshoots</p>
-
-                    <div class="px-4 mb-3 pb-3 mx-4 mt-5">
-                        <h4 class="font-bold text-lg">On Weekdays<span class="text-center float-end pr-2 pe-lg-4">750/hr</span></h4>
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">monday-thursday</p>
-                            <p class="-my-1.5">3 hours minimum</p>
-                            <p>650 for every succeeding hour</p>
-                        </div>
-                    </div>
-                    <div class="px-4 pb-3 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">On Weekends<span class="text-center float-end pr-2 pe-lg-4">900/hr</span></h4>
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">friday-sunday</p>
-                            <p class="-my-1.5">3 hours minimum</p>
-                            <p>850 for every succeeding hour</p>
-                        </div>
-                    </div>
-                    <div class="text-center">
-                        <p class="font-bold mb-3.5 mt-5">Inclusions</p>
-                        <p class="leading-4 font-light text-sm mb-20">fully air-condtioned <br>
-                        maximum of 10 persons <br>
-                        exclusive use of studio & receiving area <br>
-                        use of available backdrop & posing boxes <br>
-                        wifi available <br>
-                        street parking only</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End of studio rental  -->
-
-
-        <!-- Adds on -->
-        <div class="container" id="addson">
-            <div class="row align-items-center">
-                <div id="price-2" class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
-                    <h1 class="text-stone-500 text-center uppercase tracking-wider">Add Ons</h1>
-
-                    <div class="px-4 md:px-1 mx-4 mb-4 mt-5">
-                        <h4 class="font-bold text-lg">Extra Print<span class="text-center float-end pr-2 pe-lg-4">50</span></h4>
-                    </div>
-                    <div class="px-4 md:px-1 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">Extra Head<span class="text-center float-end  pr-2 pe-lg-4">250</span></h4>
-                    </div>
-                    <div class="px-4 md:px-1 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">Extra Kid<span class="text-center float-end  pr-2 pe-lg-4">200</span></h4>
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">below 12y/o</p>
-                            <p class="-my-1.5">3y/o & below are free</p>
-                        </div>
-                    </div>
-                    <div class="px-4 md:px-1 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">Extra Pet<span class="text-center float-end  pr-2 pe-lg-4">100</span></h4>
-                    </div>
-                    <div class="px-4 md:px-1 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">Facial Enhancement<span class="text-center float-end  pr-2 pe-lg-4">150</span></h4> 
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">basic retouching</p>
-                            <p class="-my-1.5">applies to all prints only</p>
-                        </div>
-                    </div>
-                    <div class="px-4 md:px-1 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">Soft Copy <span class="text-sm">(RAW)</span> <span class="text-center float-end  pr-2 pe-lg-4">350</span></h4>
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">all original photos</p>
-                            <p class="-my-1.5">sent through airdrop/email</p>
-                        </div>
-                    </div>
-                    <div class="px-4 md:px-1 mx-4 mb-4">
-                        <h4 class="font-bold text-lg">Enhanced Soft Copy<span class="text-center float-end  pr-2 pe-lg-4">+150</span></h4> 
-                        <div class="font-light text-sm">
-                            <p class="-mt-2">all original photos will be enhanced</p>
-                            <p class="-my-1.5">sent through email within a week</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End of adds on -->
-    </section>
-</section>
-<!-- End of price list  -->
-
-
-<!-- What's new  -->
-<section id="whats-new-section">
-    <div class="container text-center mt-12">
-        <h1 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">What's new</h1>
-        <hr class="w-10 mx-auto border-l-2 mb-2">
-    </div>
-</section>
-
-
-
-<!-- Product  -->
-<section id="product-section">
-    <div class="container text-center mt-32">
-        <h1 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">Our work.</h1>
-        <p class="italic text-stone-700 tracking-wide mb-4">Be your photo next in line</p>
-        <hr class="w-10 mx-auto border-l-2 mb-2">
-    </div>
-    <div data-aos="fade-up" data-aos-duration="500" data-aos-easing="ease-in-sine" data-aos-once="true" class="col-12 bg-white p-5">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img1.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img4.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img7.jpeg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img3.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img5.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img8.jpeg" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- End of products  -->
-
-<!-- Response -->
-<section class="mt-16">
-    <div class="row align-items-center py-5 bg-stone-900 justify-content-center">
-        <div class="col-12 col-lg-4 justify-content-center mb-5 mb-lg-0 text-center text-lg-start">
-            <div class="row align-items-center lg:pl-12" id="div-res">
-                <h2 class="text-2xl tracking-widest text-stone-100 uppercase font-bold">Like our work?</h2>
-                <p class="uppercase tracking-wide text-stone-600 text-xs my-1">We always welcome you here.</p>
-            </div>
-        </div>
-        <div class="col-12 col-lg-4 justify-content-center text-center text-lg-end">
-            <div class="container lg:pr-12">
-                <a class="bg-stone-200 px-5 py-3 w-100 text-stone-800 uppercase text-sm tracking-widest 
-                hover:text-stone-700 hover:bg-stone-100 
-                duration-300" href="booking.html">Book now</a>
-            </div>
-        </div>
-    </div>    
-</section>
-<!-- End of response  -->
-
-
-<!-- Customer reviews  -->
-<section>
-    <div class="container text-center mt-32">
-        <h1 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">People say.</h1>
-        <p class="italic text-stone-700 tracking-wide mb-4">We appreciate everything you say</p>
-        <hr class="w-10 mx-auto border-l-2 mb-2">
-    </div>
-    <div class="container my-5">
-        <div id="carouselExampleControlDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-            <div class="carousel-inner text-center">
-              <div class="carousel-item active">
-                <div class="d-block w-100 px-5">
-                    <div class="container py-8 md:px-36">
-                        <h2 class="text-xl mx-3 mb-6 mt-1 text-stone-600 font-light tracking-widest">Limmy Toledo</h2>
-                        <p class="text-stone-400 px-md-3 mx-2 pt-1 pb-8 lg:pb-8 font-light">It was a good experience and the lady there is really nice and approachable.
-                             Will definitely comeback for another shoot. Aha.</p>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 px-5">
-                    <div class="container py-8 md:px-36">
-                        <h2 class="text-xl mx-3 mb-6 mt-1 text-stone-600 font-light tracking-widest">Marwyn Sumargo</h2>
-                        <p class="text-stone-400 px-md-3 mx-2 pt-1 pb-8 lg:pb-8 font-light">Di ko pa alam di pa ako nakapunta e. <br>
-                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
-                            Omnis nobis ipsum.</p>
-                    </div>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <div class="d-block w-100 px-5">
-                    <div class="container py-8 md:px-36">
-                        <h2 class="text-xl mx-3 mb-6 mt-1 text-stone-600 font-light tracking-widest">Kathleen Czerene A. Mesa</h2>
-                        <p class="text-stone-400 px-md-3 mx-2 pt-1 pb-8 lg:pb-8 font-light">It was a fun experience! Very organize and aesthetic ng place. The service is superb & fast. 
-                            I appreciate how accommodating the staffs. Will surely go back here & definitely will recommend
-                            this place to my Southies friends! </p>
-                    </div>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlDark" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlDark" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    </div>
-</section>
-<!-- End of customer reviews  -->
-
-
-<!-- Map  -->
-    <section class="md:mt-32 py-6">
-        <div class="row mb-4">
-            <div class="col">
-                <div class="container text-center">
-                    <h2 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">Our place.</h2>
-                    <p class="italic text-stone-700 tracking-wide mb-md-2">Experience the best</p>
-                </div>
-            </div>
-        </div>
-        <div class="row align-items-center pb-6">
-            <div class="container">
-                <div class="col justify-content-center">
-                    <img class="img-fluid" src="./public/utility-images/Geomap.png" alt="maplocation">
-                </div>
-            </div>
-        </div>
-    </section>
-<!-- End of map  -->
-
-
-<!-- Footer  -->
-<div class="container mt-8 pt-1 pb-5">
-    <div class="row mb-5">
-        <div class="col">
-            <div class="container text-center">
-                <h2 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">Contact us.</h2>
-                <hr class="w-10 mx-auto border-l-2 mb-2">
-            </div>
-        </div>
-    </div>
-    <div class="row align-items-center">
-        <div class="col justify-content-center pt-2 pb-4">
-            <div id="hover-section" class="row container text-center mt-2 mb-6 mx-0">
-                <div class="col-12 col-lg-9 text-center order-2 order-lg-1 text-lg-end">
-                    <p class="uppercase text-xs tracking-widest font-light">Call us</p>
-                    <p class="font-bold">(+63 ) 919 - 231 - 9278</p>
-                </div>
-                <div class="col-12 col-lg-3 lg:border-l-2 text-lg-start order-1 order-lg-2">
-                    <img class="img-fluid h-6 w-6 lg:mt-3 my-2 mx-auto mx-lg-0" src="./public/utility-images/phone.png" alt="phone">
-                </div>
-            </div>
-
-
-            <div id="hover-section" class="row container text-center mb-6 mx-0">
-                <div class="col-12 col-lg-9 text-center order-2 order-lg-1 text-lg-end">
-                    <p class="uppercase text-xs tracking-widest font-light">Address</p>
-                    <p class="font-bold">B6 L6 Francisco De Castro, G.M.A, Cavite</p>
-                </div>
-                <div class="col-12 col-lg-3 lg:border-l-2 text-lg-start order-1 order-lg-2">
-                    <img class="img-fluid h-6 w-6 mt-6 mt-lg-3 my-2 mx-auto mx-lg-0" src="./public/utility-images/marker.png" alt="location-marker">
-                </div>
-            </div>
-
-
-            <div id="hover-section" class="row container text-center mx-0 mb-7">
-                <div class="col-12 col-lg-9 text-center order-2 order-lg-1 text-lg-end">
-                    <p class="uppercase text-xs tracking-widest font-light">Email us</p>
-                    <p class="font-bold">ufoto@gmail.com</p>
-                </div>
-                <div class="col-12 col-lg-3 lg:border-l-2 text-lg-start order-1 order-lg-2">
-                    <img class="img-fluid h-6 w-6 lg:mt-3 my-2 mx-auto mx-lg-0" src="./public/utility-images/email.png" alt="email-address">
-                </div>
-            </div>
-        </div>
-
-
-        <div class="col-12 col-lg-7 mx-0 px-2 px-md-5">
-            <div class="container">
-                <form action="">
-                    <div class="mb-3 form-floating">
-                        <input class="form-control" type="text" id="name" placeholder="Name">
-                        <label for="floatingInput">Name</label>
-                    </div>
-                    <div class="mb-3 form-floating">
-                        <input class="form-control" type="text" id="email" placeholder="Email Address">
-                        <label for="floatingInput">Email Address</label>
-                    </div>
-                    <div class="form-floating mb-3">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message here."></textarea>
-                        <label for="floatingInput">Message</label>
-                    </div>
-                    <button type="submit" class="border-2 border-black px-4 py-2 w-100 uppercase text-lg tracking-widest hover:text-white hover:bg-stone-800 duration-300">Send</button>
-                </form>
-            </div>
-        </div>
-    </div>
+<div class="sticky top-0 z-50">
+<nav class="navbar navbar-expand-lg w-full d-flex flex-wrap align-items-center justify-content-start justify-content-md-center hover:bg-white hover:duration-500 justify-content-md-between border-bottom py-lg-0">
+<button class="navbar-toggler border-0" type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasExample aria-controls=offcanvasExample aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<ul class="navbar-nav d-flex col-12 col-md-3 mb-2 mb-md-0 align-items-center order-2 order-sm-1 text-decoration-none uppercase pl-16 tracking-widest text-sm d-none d-lg-flex">
+<li>
+<a href=index.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Home</a>
+</li>
+<li>
+<a href=product.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Photos</a>
+</li>
+<li>
+<a href=contact.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Contact</a>
+</li>
+</ul>
+<a href=index.html class="text-decoration-none justify-content-center order-1 order-sm-2 col-md-auto mb-2 col-12 mb-md-0 d-none d-lg-block py-8 text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold duration-300">UFOTO</a>
+<div class="col-md-3 text-end pr-20 order-3 d-none d-lg-block">
+<a href=booking.html class="uppercase py-9 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300 px-2 text-sm tracking-widest">Book now</a>
 </div>
-<!-- End of footer  -->
-
-
-<!-- Photo's modal  -->
-    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog" data-dismiss="modal">
-          <div class="modal-content position-relative"> 
-            <div class="modal-header border-0 pb-0 mr-3">
-                <button id="modal-close" type="button" class="btn-close h-5 w-5" data-bs-dismiss="modal" aria-label="Close">
-                    <img src="./public/utility-images/Close-button2.png" alt="">
-                </button>
-            </div>    
-            <div class="modal-body">
-                 <img src="" class="imagepreview" style="width: 100%;" >
-            </div>       
-          </div>
-        </div>
-    </div>
-
-    <script src="main.js"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <script> AOS.init(); </script>
-
+</nav>
+</div>
+<div class="offcanvas offcanvas-start" tabindex=-1 id=offcanvasExample aria-labelledby=offcanvasExampleLabel>
+<div class="offcanvas-header pb-0">
+<h5 class="offcanvas-title text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold duration-300 cursor-pointer" id=offcanvasExampleLabel>UFOTO</h5>
+<button type=button class=btn-close data-bs-dismiss=offcanvas aria-label=Close>
+<img src=./public/utility-images/Close-button2.png alt=close-button>
+</button>
+</div>
+<div class=offcanvas-body>
+<nav class="navbar py-0">
+<ul class="navbar-nav py-1 uppercase tracking-widest text-sm">
+<li>
+<a href=index.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Home</a>
+</li>
+<li>
+<a href=product.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Photos</a>
+</li>
+<li>
+<a href=contact.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Contact</a>
+</li>
+<li>
+<a href=booking.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Book</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<figure id=intro-image-first class="figure mb-10 -mt-14 sm:-mt-0 lg:-mt-32">
+<div class=overlay-gradient>
+<img src=./public/utility-images/intro-small-min.png alt=... class="d-block d-sm-none" id=introSmallImage>
+<img src=./public/utility-images/intro-desktop-min.jpeg class="img-fluid d-none d-sm-block img-intro" alt=... id=introImage>
+</div>
+</figure>
+<section class="container mt-12 md:mt-24 mb-5 sm:mb-2">
+<div class="row text-center px-3">
+<h2 class="uppercase text-2xl md:text-4xl font-bold tracking-widest text-stone-600 mb-2">Our story.</h2>
+<h1 class="italic tracking-wide text-stone-700 mb-4">We're self-portrait studio from Cavite</h1>
+<hr class="w-10 mx-auto mb-12">
+<p class="text-stone-400 px-md-44">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Corrupti earum accusantium ipsa temporibus perspiciatis ullam,
+totam dignissimos dolor voluptates error placeat voluptatem eos nulla.
+Velit nobis quas quis amet suscipit!</p>
+</div>
+</section>
+<div class="overlay-gradient1 mt-32">
+<div id=intro-background></div>
+</div>
+<section>
+<div class="container text-center mt-32">
+<h2 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">We offer.</h2>
+<h4 class="italic tracking-wide text-stone-700 mb-4">We provide the best experiences</h4>
+<hr class="w-10 mx-auto border-l-2 mb-12">
+</div>
+<section class="align-items-center mt-12">
+<div class="col-12 justify-content-center text-center mb-5 sm:pr-0">
+<button class="text-stone-600 border-2 border-stone-500 hover:border-stone-800 rounded-full px-4 py-1.5 duration-500 uppercase text-xs mb-1" id=btn1>Self-portrait shoot</button>
+<button class="text-stone-600 border-2 border-stone-100 hover:border-stone-800 rounded-full px-4 py-1.5 mx-md-5 duration-500 uppercase text-xs" id=btn3>Adds on</button>
+<button class="text-stone-600 border-2 border-stone-100 hover:border-stone-500 rounded-full px-4 py-1.5 duration-500 uppercase text-xs" id=btn2>Studio rental</button>
+</div>
+<div class=container id=selfportrait>
+<div class=align-items-center>
+<div class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
+<h1 class="text-stone-500 text-center uppercase tracking-wider">Self-Portrait Shoot</h1>
+<div class="px-4 pb-3 mx-4 mt-5 mb-3">
+<h4 class="font-bold text-lg">Solo Package<span class="text-center float-end pr-2 pe-lg-4">500</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>good for 1 pax</p>
+<p class=-my-1.5>15 mins shooting</p>
+<p>15 mins selecting</p>
+<p class=-my-1.5>2 photo prints</p>
+<p>soft copies of all prints</p>
+</div>
+</div>
+<div class="px-4 pb-3 mx-4 mb-3">
+<h4 class="font-bold text-lg">Duo Package<span class="text-center float-end pr-2 pe-lg-4">750</span></h4>
+<div class="text-sm font-light">
+<p class=-mt-2>good for 2 pax</p>
+<p class=-my-1.5>15 mins shooting</p>
+<p>15 mins selecting</p>
+<p class=-my-1.5>2 photo prints</p>
+<p>soft copies of all prints</p>
+</div>
+</div>
+<div class="px-4 pb-3 mx-4 mb-4">
+<h4 class="font-bold text-lg">Group Package<span class="text-center float-end pr-2 pe-lg-4">1500</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>good for 5 pax</p>
+<p class=-my-1.5>20 mins shooting</p>
+<p>15 mins selecting</p>
+<p class=-my-1.5>5 photo prints</p>
+<p>soft copies of all prints</p>
+</div>
+</div>
+<div class="text-center leading-4 text-sm py-3 mb-6 font-light">
+<p>for groups exceeding 2 pax. <br>
+you may book the duo package <br>
+and just add extra heads.</p>
+</div>
+</div>
+</div>
+</div>
+<div class=container id=studiorental>
+<div class="row align-items-center">
+<div class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
+<h1 class="text-stone-500 text-center uppercase tracking-wider">Studio Rental</h1>
+<p class="text-sm text-center font-light italic text-stone-800">for Photoshoots</p>
+<div class="px-4 mb-3 pb-3 mx-4 mt-5">
+<h4 class="font-bold text-lg">On Weekdays<span class="text-center float-end pr-2 pe-lg-4">750/hr</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>monday-thursday</p>
+<p class=-my-1.5>3 hours minimum</p>
+<p>650 for every succeeding hour</p>
+</div>
+</div>
+<div class="px-4 pb-3 mx-4 mb-4">
+<h4 class="font-bold text-lg">On Weekends<span class="text-center float-end pr-2 pe-lg-4">900/hr</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>friday-sunday</p>
+<p class=-my-1.5>3 hours minimum</p>
+<p>850 for every succeeding hour</p>
+</div>
+</div>
+<div class=text-center>
+<p class="font-bold mb-3.5 mt-5">Inclusions</p>
+<p class="leading-4 font-light text-sm mb-20">fully air-condtioned <br>
+maximum of 10 persons <br>
+exclusive use of studio & receiving area <br>
+use of available backdrop & posing boxes <br>
+wifi available <br>
+street parking only</p>
+</div>
+</div>
+</div>
+</div>
+<div class=container id=addson>
+<div class="row align-items-center">
+<div id=price-2 class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
+<h1 class="text-stone-500 text-center uppercase tracking-wider">Add Ons</h1>
+<div class="px-4 md:px-1 mx-4 mb-4 mt-5">
+<h4 class="font-bold text-lg">Extra Print<span class="text-center float-end pr-2 pe-lg-4">50</span></h4>
+</div>
+<div class="px-4 md:px-1 mx-4 mb-4">
+<h4 class="font-bold text-lg">Extra Head<span class="text-center float-end pr-2 pe-lg-4">250</span></h4>
+</div>
+<div class="px-4 md:px-1 mx-4 mb-4">
+<h4 class="font-bold text-lg">Extra Kid<span class="text-center float-end pr-2 pe-lg-4">200</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>below 12y/o</p>
+<p class=-my-1.5>3y/o & below are free</p>
+</div>
+</div>
+<div class="px-4 md:px-1 mx-4 mb-4">
+<h4 class="font-bold text-lg">Extra Pet<span class="text-center float-end pr-2 pe-lg-4">100</span></h4>
+</div>
+<div class="px-4 md:px-1 mx-4 mb-4">
+<h4 class="font-bold text-lg">Facial Enhancement<span class="text-center float-end pr-2 pe-lg-4">150</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>basic retouching</p>
+<p class=-my-1.5>applies to all prints only</p>
+</div>
+</div>
+<div class="px-4 md:px-1 mx-4 mb-4">
+<h4 class="font-bold text-lg">Soft Copy <span class=text-sm>(RAW)</span> <span class="text-center float-end pr-2 pe-lg-4">350</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>all original photos</p>
+<p class=-my-1.5>sent through airdrop/email</p>
+</div>
+</div>
+<div class="px-4 md:px-1 mx-4 mb-4">
+<h4 class="font-bold text-lg">Enhanced Soft Copy<span class="text-center float-end pr-2 pe-lg-4">+150</span></h4>
+<div class="font-light text-sm">
+<p class=-mt-2>all original photos will be enhanced</p>
+<p class=-my-1.5>sent through email within a week</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id=whats-new-section class="border-y-2 pb-4">
+<div class="container py-2">
+<div class="text-center mt-5">
+<h1 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">What's new</h1>
+<hr class="w-10 mx-auto border-l-2 mb-2">
+</div>
+<div class=mt-5>
+<div class="grid md:gap-2 mx-auto md:grid-rows-1 md:grid-cols-2">
+<div class="md:items-center md:flex md:py-20">
+<div class="text-2xl tracking-widest my-2 md:my-auto">
+<div id=new-bg class=mx-2>
+<h2 class=font-light>New <span class="float-end flex-row flex mt-1">
+<div class="h-5 w-5 bg-gray-400 rounded-full"></div>
+<div class="h-5 w-5 bg-yellow-600 mx-2 rounded-full"></div>
+<div class="h-5 w-5 bg-yellow-500 rounded-full"></div>
+</span></h2>
+<h2 class="md:text-4xl my-2 text-stone-600 font-bold uppercase mb-2"><span class=gradient-text>background colors</span></h2>
+</div>
+<div id=new-time class=mx-2>
+<h2 class=font-light>New</h2>
+<h2 class="md:text-4xl my-2 text-stone-600 font-bold uppercase mb-2">shooting time</h2>
+</div>
+<div class=mx-2>
+<button id=new-btn-1 class=text-gray-200>
+&larr;
+</button>
+<button id=new-btn-2>
+&rarr;
+</button>
+</div>
+</div>
+</div>
+<div class="justify-center items-center flex">
+<div id=new-bg-carousel class="container my-5">
+<div id=carouselExampleControlDark class="carousel carousel-dark slide" data-bs-ride=carousel>
+<div class="carousel-inner text-center">
+<div class="carousel-item active">
+<div class="d-block w-100 px-5">
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Group/white-imggroup2-min.jpeg alt>
+</a>
+</div>
+</div>
+<div class=carousel-item>
+<div class="d-block w-100 px-5">
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/white-imgduo1-min.jpeg alt>
+</a>
+</div>
+</div>
+<div class=carousel-item>
+<div class="d-block w-100 px-5">
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/white-imgduo4-min.jpeg alt>
+</a>
+</div>
+</div>
+</div>
+<button class=carousel-control-prev type=button data-bs-target=#carouselExampleControlDark data-bs-slide=prev>
+<span class=carousel-control-prev-icon aria-hidden=true></span>
+<span class=visually-hidden>Previous</span>
+</button>
+<button class=carousel-control-next type=button data-bs-target=#carouselExampleControlDark data-bs-slide=next>
+<span class=carousel-control-next-icon aria-hidden=true></span>
+<span class=visually-hidden>Next</span>
+</button>
+</div>
+</div>
+<div id=new-time-content class=my-3>
+<div class="tracking-widest container">
+<p class="font-light text-2xl">Upgraded</p>
+<h1 class="text-center uppercase font-bold my-3 text-xl"><span class=gradient-text>group package</span> shooting time <p class=underline> to 20 mins</p></h1>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id=product-section>
+<div class="container text-center mt-20">
+<h1 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">Our work.</h1>
+<p class="italic text-stone-700 tracking-wide mb-4">Be your photo next in line</p>
+<hr class="w-10 mx-auto border-l-2 mb-2">
+</div>
+<div data-aos=fade-up data-aos-duration=500 data-aos-easing=ease-in-sine data-aos-once=true class="col-12 bg-white px-2 py-4">
+<div class=container>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img1-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img4-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img7-min.jpeg alt>
+</a>
+</div>
+</div>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img3-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img5-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img8-min.jpeg alt>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class=mt-16>
+<div class="row align-items-center py-5 bg-stone-800 justify-content-center">
+<div class="col-12 col-lg-4 justify-content-center mb-5 mb-lg-0 text-center text-lg-start">
+<div class="row align-items-center lg:pl-12" id=div-res>
+<h2 class="text-2xl tracking-widest text-stone-100 uppercase font-bold">Like our work?</h2>
+<p class="uppercase tracking-wide text-stone-500 text-xs my-1">We always welcome you here.</p>
+</div>
+</div>
+<div class="col-12 col-lg-4 justify-content-center text-center text-lg-end">
+<div class="container lg:pr-12">
+<a class="bg-stone-200 px-5 py-3 w-100 text-stone-800 uppercase text-sm tracking-widest hover:text-stone-700 hover:bg-stone-100 duration-300" href=booking.html>Book now</a>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div class="container text-center mt-32">
+<h1 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">People say.</h1>
+<p class="italic text-stone-700 tracking-wide mb-4">We appreciate everything you say</p>
+<hr class="w-10 mx-auto border-l-2 mb-2">
+</div>
+<div class="container my-5">
+<div id=carouselExampleControlDark class="carousel carousel-dark slide" data-bs-ride=carousel>
+<div class="carousel-inner text-center">
+<div class="carousel-item active">
+<div class="d-block w-100 px-5">
+<div class="container py-8 md:px-36">
+<h2 class="text-xl mx-3 mb-6 mt-1 text-stone-600 font-light tracking-widest">Limmy Toledo</h2>
+<p class="text-stone-400 px-md-3 mx-2 pt-1 pb-8 lg:pb-8 font-light">It was a good experience and the lady there is really nice and approachable.
+Will definitely comeback for another shoot. Aha.</p>
+</div>
+</div>
+</div>
+<div class=carousel-item>
+<div class="d-block w-100 px-5">
+<div class="container py-8 md:px-36">
+<h2 class="text-xl mx-3 mb-6 mt-1 text-stone-600 font-light tracking-widest">Marwyn Sumargo</h2>
+<p class="text-stone-400 px-md-3 mx-2 pt-1 pb-8 lg:pb-8 font-light">Di ko pa alam di pa ako nakapunta e. <br>
+Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+Omnis nobis ipsum.</p>
+</div>
+</div>
+</div>
+<div class=carousel-item>
+<div class="d-block w-100 px-5">
+<div class="container py-8 md:px-36">
+<h2 class="text-xl mx-3 mb-6 mt-1 text-stone-600 font-light tracking-widest">Kathleen Czerene A. Mesa</h2>
+<p class="text-stone-400 px-md-3 mx-2 pt-1 pb-8 lg:pb-8 font-light">It was a fun experience! Very organize and aesthetic ng place. The service is superb & fast.
+I appreciate how accommodating the staffs. Will surely go back here & definitely will recommend
+this place to my Southies friends! </p>
+</div>
+</div>
+</div>
+</div>
+<button class=carousel-control-prev type=button data-bs-target=#carouselExampleControlDark data-bs-slide=prev>
+<span class=carousel-control-prev-icon aria-hidden=true></span>
+<span class=visually-hidden>Previous</span>
+</button>
+<button class=carousel-control-next type=button data-bs-target=#carouselExampleControlDark data-bs-slide=next>
+<span class=carousel-control-next-icon aria-hidden=true></span>
+<span class=visually-hidden>Next</span>
+</button>
+</div>
+</div>
+</section>
+<section class="md:mt-32 py-6">
+<div class="row mb-4">
+<div class=col>
+<div class="container text-center">
+<h2 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">Our place.</h2>
+<p class="italic text-stone-700 tracking-wide mb-md-2">Experience the best</p>
+</div>
+</div>
+</div>
+<div class="row align-items-center pb-6">
+<div class=container>
+<div class="col justify-content-center">
+<div id=map style=width:100%;height:500px></div>
+</div>
+</div>
+</div>
+</section>
+<div class="container mt-8 pt-1 pb-5">
+<div class="row mb-5">
+<div class=col>
+<div class="container text-center">
+<h2 class="text-2xl md:text-4xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-2">Contact us.</h2>
+<hr class="w-10 mx-auto border-l-2 mb-2">
+</div>
+</div>
+</div>
+<div class="row align-items-center">
+<div class="col justify-content-center pt-2 pb-4">
+<div id=hover-section class="row container text-center mt-2 mb-6 mx-0">
+<div class="col-12 col-lg-9 text-center order-2 order-lg-1 text-lg-end">
+<p class="uppercase text-xs tracking-widest font-light">Call us</p>
+<p class=font-bold>(+63 ) 919 - 231 - 9278</p>
+</div>
+<div class="col-12 col-lg-3 lg:border-l-2 text-lg-start order-1 order-lg-2">
+<img class="img-fluid h-6 w-6 lg:mt-3 my-2 mx-auto mx-lg-0" src=./public/utility-images/phone.png alt=phone>
+</div>
+</div>
+<div id=hover-section class="row container text-center mb-6 mx-0">
+<div class="col-12 col-lg-9 text-center order-2 order-lg-1 text-lg-end">
+<p class="uppercase text-xs tracking-widest font-light">Address</p>
+<p class=font-bold>MV Villar Ave, South 1, Camella Springville 4102 Bacoor, Philippines</p>
+</div>
+<div class="col-12 col-lg-3 lg:border-l-2 text-lg-start order-1 order-lg-2">
+<img class="img-fluid h-6 w-6 mt-6 mt-lg-3 my-2 mx-auto mx-lg-0" src=./public/utility-images/marker.png alt=location-marker>
+</div>
+</div>
+<div id=hover-section class="row container text-center mx-0 mb-7">
+<div class="col-12 col-lg-9 text-center order-2 order-lg-1 text-lg-end">
+<p class="uppercase text-xs tracking-widest font-light">Email us</p>
+<p class=font-bold>ufoto@the323studios.com</p>
+</div>
+<div class="col-12 col-lg-3 lg:border-l-2 text-lg-start order-1 order-lg-2">
+<img class="img-fluid h-6 w-6 lg:mt-3 my-2 mx-auto mx-lg-0" src=./public/utility-images/email.png alt=email-address>
+</div>
+</div>
+</div>
+<div class="col-12 col-lg-7 mx-0 px-2 px-md-5">
+<div class=container>
+<form action>
+<div class="mb-3 form-floating">
+<input class=form-control type=text id=name placeholder=Name>
+<label for=floatingInput>Name</label>
+</div>
+<div class="mb-3 form-floating">
+<input class=form-control type=text id=email placeholder="Email Address">
+<label for=floatingInput>Email Address</label>
+</div>
+<div class="form-floating mb-3">
+<textarea class=form-control id=exampleFormControlTextarea1 rows=3 placeholder="Type your message here."></textarea>
+<label for=floatingInput>Message</label>
+</div>
+<button type=submit class="border-2 border-black px-4 py-2 w-100 uppercase text-lg tracking-widest hover:text-white hover:bg-stone-800 duration-300">Send</button>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="modal fade" id=imagemodal tabindex=-1 role=dialog aria-labelledby=myModalLabel aria-hidden=true>
+<div class=modal-dialog data-dismiss=modal>
+<div class="modal-content position-relative">
+<div class="modal-header border-0 pb-0 mr-3">
+<button id=modal-close type=button class="btn-close h-5 w-5" data-bs-dismiss=modal aria-label=Close>
+<img src=./public/utility-images/Close-button2.png alt>
+</button>
+</div>
+<div class=modal-body>
+<img src class=imagepreview style=width:100%>
+</div>
+</div>
+</div>
+</div>
+<script src=main.js></script>
+<script src=https://unpkg.com/aos@2.3.1/dist/aos.js></script>
+<script>AOS.init();</script>
+<script>mapboxgl.accessToken='pk.eyJ1IjoibWFyd3luIiwiYSI6ImNsNGR5cXluZTA1N3kzY3J5ZmttcTV5dHgifQ.vBHpkLjKySnJR-_8ZTQ_WQ';const map=new mapboxgl.Map({container:'map',style:'mapbox://styles/mapbox/streets-v11',center:[120.994697,14.383045],zoom:14,projection:'globe'});map.on('style.load',()=>{map.setFog({});});map.addControl(new mapboxgl.NavigationControl());new mapboxgl.Marker().setLngLat([120.994697,14.383045]).setPopup(new mapboxgl.Popup({offset:25}).setHTML(`<a href="https://www.google.com/maps/place/UFOTO+Self+Portrait+Studio/@14.3829821,120.9945279,20.89z/data=!4m5!3m4!1s0x3397d1504ad94bf1:0xf86cd55b3a12110e!8m2!3d14.3830915!4d120.9946036">UFOTO Self-Portrait Studio</a>`)).addTo(map);</script>
 </body>
 </html>

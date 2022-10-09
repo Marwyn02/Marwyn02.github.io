@@ -1,232 +1,189 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>UFOTO Self-Portrait Studio | Booking</title>
-
-    <meta name="description" content="Self-portrait studio in cavite">
-
-    <!-- Meta Icon  -->
-    <link rel="icon" type="image/ico" href="./public/favicon.ico"/>
-
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="SELF PORTRAIT, PHOTOSHOOT, PHOTOGRAPHY">
-
-    <!-- Meta Author -->
-    <meta name="author" content="Jhun Marwyn Sumargo">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-    
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- Icon  -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>UFOTO Self-Portrait Studio | Booking</title>
+<meta name=description content="Self-portrait studio in cavite">
+<link rel=icon type=image/ico href="./public/favicon.ico"/>
+<meta name=keywords content="SELF PORTRAIT, PHOTOSHOOT, PHOTOGRAPHY">
+<meta name=author content="Jhun Marwyn Sumargo">
+<script src=https://cdn.tailwindcss.com></script>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor crossorigin=anonymous>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js integrity=sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 crossorigin=anonymous></script>
+<link rel=stylesheet href=style.css>
+<link href=https://unpkg.com/aos@2.3.1/dist/aos.css rel=stylesheet>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css>
 </head>
 <body>
-
-<!-- Navbar  -->
-    <div class="z-10">
-        <nav class="navbar navbar-expand-lg w-full d-flex flex-wrap align-items-center justify-content-start justify-content-md-center
-           hover:bg-white hover:duration-500 justify-content-md-between border-bottom py-lg-0">
-           
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                <ul class="navbar-nav d-flex col-12 col-md-3 mb-2 mb-md-0 align-items-center
-                order-2 order-sm-1 text-decoration-none uppercase pl-16 tracking-widest text-sm d-none d-lg-flex">
-                    <li>
-                        <a href="index.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300">Home</a>
-                    </li>
-                    <li>
-                        <a href="product.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300 ">Photos</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300">Contact</a>
-                    </li>
-                </ul>
-                <a href="index.html" class="text-decoration-none justify-content-center 
-                order-1 order-sm-2 col-md-auto mb-2 col-12 mb-md-0 d-none d-lg-block 
-                py-8 text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold
-                duration-300">UFOTO</a>
-                <div class="col-md-3 text-end pr-20 order-3 d-none d-lg-block">
-                    <a href="booking.html" class="uppercase py-9 link-secondary border-b-2
-                    border-stone-500 duration-300 px-2
-                    text-sm tracking-widest">Book now</a>
-                </div>
-        </nav>
-    </div>
-
-    <!-- Offcanvas  -->
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header pb-0">
-          <h5 class="offcanvas-title text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold
-          duration-300 cursor-pointer" id="offcanvasExampleLabel">UFOTO</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-            <img src="./public/utility-images/Close-button2.png" alt="close-button">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <nav class="navbar py-0">
-            <ul class="navbar-nav py-1 uppercase tracking-widest text-sm">
-                <li>
-                    <a href="index.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Home</a>
-                </li>
-                <li>
-                    <a href="product.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Photos</a>
-                </li>
-                <li>
-                    <a href="contact.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Contact</a>
-                </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!-- End of Offcanvas  -->
-
-
-<!-- End of navbar  -->
-
+<div class=z-10>
+<nav class="navbar navbar-expand-lg w-full d-flex flex-wrap align-items-center justify-content-start justify-content-md-center hover:bg-white hover:duration-500 justify-content-md-between border-bottom py-lg-0">
+<button class="navbar-toggler border-0" type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasExample aria-controls=offcanvasExample aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<ul class="navbar-nav d-flex col-12 col-md-3 mb-2 mb-md-0 align-items-center order-2 order-sm-1 text-decoration-none uppercase pl-16 tracking-widest text-sm d-none d-lg-flex">
+<li>
+<a href=index.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Home</a>
+</li>
+<li>
+<a href=product.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Photos</a>
+</li>
+<li>
+<a href=contact.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Contact</a>
+</li>
+</ul>
+<a href=index.html class="text-decoration-none justify-content-center order-1 order-sm-2 col-md-auto mb-2 col-12 mb-md-0 d-none d-lg-block py-8 text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold duration-300">UFOTO</a>
+<div class="col-md-3 text-end pr-20 order-3 d-none d-lg-block">
+<a href=booking.html class="uppercase py-9 link-secondary border-b-2 border-stone-500 duration-300 px-2 text-sm tracking-widest">Book now</a>
+</div>
+</nav>
+</div>
+<div class="offcanvas offcanvas-start" tabindex=-1 id=offcanvasExample aria-labelledby=offcanvasExampleLabel>
+<div class="offcanvas-header pb-0">
+<h5 class="offcanvas-title text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold duration-300 cursor-pointer" id=offcanvasExampleLabel>UFOTO</h5>
+<button type=button class=btn-close data-bs-dismiss=offcanvas aria-label=Close>
+<img src=./public/utility-images/Close-button2.png alt=close-button>
+</button>
+</div>
+<div class=offcanvas-body>
+<nav class="navbar py-0">
+<ul class="navbar-nav py-1 uppercase tracking-widest text-sm">
+<li>
+<a href=index.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Home</a>
+</li>
+<li>
+<a href=product.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Photos</a>
+</li>
+<li>
+<a href=contact.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Contact</a>
+</li>
+<li>
+<a href=booking.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Book</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
 <section>
-    <div id="booking-background"></div>
+<div id=booking-background></div>
 </section>
-
-
 <section>
-    <div class="container bg-white py-16">
-        <div class="row">
-            <div class="col-12 col-md-4 px-5">
-                <div class="container my-2">
-                    <h2 class="text-xl md:text-lg my-2 text-stone-600 
-                    tracking-widest font-bold uppercase mb-4">Opening hours</h2>
-                    <div class="font-light mb-4">
-                        <p class="mb-1 font-bold text-stone-600">Monday <span class="font-light">—</span> Wednesday</p>
-                        <p class="mb-3 tracking-wider">10:00 AM to 7:30 PM</p>
-                        <p class="mb-1 font-bold text-stone-600">Friday <span class="font-light">—</span> Sunday</p>
-                        <p class="tracking-wider">9:00 AM to 7:30 PM</p>
-                    </div>
-                    <p class="font-light tracking-wider opacity-75">We're CLOSED on thursday.</p>
-                        
-
-                </div>
-            </div>
-            <div class="col-12 col-md-8 px-5 border-l-2 mt-12 md:mt-0">
-                <div class="container">
-                    <h2 class="text-2xl md:text-3xl my-2 text-stone-600 
-                    tracking-widest font-bold uppercase mb-3">Book your appointment here.</h2>
-                    <p class="font-light mb-3">Use this form to create your slot.</p>
-                    <form action="">
-                        <div class="mb-4 form-floating">
-                            <input class="form-control" type="text" id="name" placeholder="Name">
-                            <label for="floatingInput">Name</label>
-                        </div>
-                        <div class="mb-4 form-floating">
-                            <input class="form-control" type="text" id="email" placeholder="Email Address">
-                            <label for="floatingInput">Email Address</label>
-                        </div>
-                        <div class="row">
-                            <div class="col">
-                                <div class="mb-4">
-                                    <label class="mb-2 font-light" for="month">Month</label>
-                                    <select name="month" id="month" class="form-select">
-                                        <option value="1">Jan</option>
-                                        <option value="2">Feb</option>
-                                        <option value="3">Mar</option>
-                                        <option value="4">Apr</option>
-                                        <option value="5">May</option>
-                                        <option value="6">Jun</option>
-                                        <option value="7">Jul</option>
-                                        <option value="8">Aug</option>
-                                        <option value="9">Sep</option>
-                                        <option value="10">Oct</option>
-                                        <option value="11">Nov</option>
-                                        <option value="12">Dec</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="mb-4">
-                                    <label class="mb-2 font-light" for="day">Day</label>
-                                    <select name="day" id="day" class="form-select">
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                        <option value="3">3</option>
-                                        <option value="4">4</option>
-                                        <option value="5">5</option>
-                                        <option value="6">6</option>
-                                        <option value="7">7</option>
-                                        <option value="8">8</option>
-                                        <option value="9">9</option>
-                                        <option value="10">10</option>
-                                        <option value="11">11</option>
-                                        <option value="12">12</option>
-                                        <option value="13">13</option>
-                                        <option value="14">14</option>
-                                        <option value="15">15</option>
-                                        <option value="16">16</option>
-                                        <option value="17">17</option>
-                                        <option value="18">18</option>
-                                        <option value="19">19</option>
-                                        <option value="20">20</option>
-                                        <option value="21">21</option>
-                                        <option value="22">22</option>
-                                        <option value="23">23</option>
-                                        <option value="24">24</option>
-                                        <option value="25">25</option>
-                                        <option value="26">26</option>
-                                        <option value="27">27</option>
-                                        <option value="28">28</option>
-                                        <option value="29">29</option>
-                                        <option value="30">30</option>
-                                        <option value="31">31</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="mb-4">
-                                    <label class="mb-2 font-light" for="time">Time</label>
-                                    <select name="time" id="time" class="form-select">
-                                        <option value="9_to_10">9:00 to 10:00 - AM</option>
-                                        <option value="10_to_11">10:00 to 11:00 - AM</option>
-                                        <option value="11_to_12">11:00 to 12:00 - AM</option>
-                                        <option value="12_to_1">12:00 to 1:00 - PM</option>
-                                        <option value="1_to_2">1:00 to 2:00 - PM</option>
-                                        <option value="2_to_3">2:00 to 3:00 - PM</option>
-                                        <option value="3_to_4">3:00 to 4:00 - PM</option>
-                                        <option value="4_to_5">4:00 to 5:00 - PM</option>
-                                        <option value="5_to_6">5:00 to 6:00 - PM</option>
-                                        <option value="6_to_7">6:00 to 7:00 - PM</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-floating mb-5">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type your message here."></textarea>
-                            <label for="floatingInput">Message</label>
-                        </div>
-                        <p class="text-sm font-light opacity-50 mb-4">*Note: Once sent please wait for an hour in response of your appointment.</p>
-                        <button type="submit" class="border-2 border-black px-4 py-2 w-100 uppercase mb-3 text-lg tracking-widest hover:text-white hover:bg-stone-800 duration-300">Send</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="container bg-white py-16">
+<div class=row>
+<div class="col-12 col-md-4 px-5">
+<div class="container my-2">
+<h2 class="text-xl md:text-lg my-2 text-stone-600 tracking-widest font-bold uppercase mb-4">Opening hours</h2>
+<div class="font-light mb-4">
+<p class="mb-1 font-bold text-stone-600">Monday <span class=font-light>—</span> Wednesday</p>
+<p class="mb-3 tracking-wider">10:00 AM to 7:30 PM</p>
+<p class="mb-1 font-bold text-stone-600">Friday <span class=font-light>—</span> Sunday</p>
+<p class=tracking-wider>9:00 AM to 7:30 PM</p>
+</div>
+<p class="font-light tracking-wider opacity-75">We're CLOSED on thursday.</p>
+</div>
+</div>
+<div class="col-12 col-md-8 px-5 border-l-2 mt-12 md:mt-0">
+<div class=container>
+<h2 class="text-2xl md:text-3xl my-2 text-stone-600 tracking-widest font-bold uppercase mb-3">Book your appointment here.</h2>
+<p class="font-light mb-3">Use this form to create your slot.</p>
+<form action>
+<div class="mb-4 form-floating">
+<input class=form-control type=text id=name placeholder=Name>
+<label for=floatingInput>Name</label>
+</div>
+<div class="mb-4 form-floating">
+<input class=form-control type=text id=email placeholder="Email Address">
+<label for=floatingInput>Email Address</label>
+</div>
+<div class=row>
+<div class=col>
+<div class=mb-4>
+<label class="mb-2 font-light" for=month>Month</label>
+<select name=month id=month class=form-select>
+<option value=1>Jan</option>
+<option value=2>Feb</option>
+<option value=3>Mar</option>
+<option value=4>Apr</option>
+<option value=5>May</option>
+<option value=6>Jun</option>
+<option value=7>Jul</option>
+<option value=8>Aug</option>
+<option value=9>Sep</option>
+<option value=10>Oct</option>
+<option value=11>Nov</option>
+<option value=12>Dec</option>
+</select>
+</div>
+</div>
+<div class=col>
+<div class=mb-4>
+<label class="mb-2 font-light" for=day>Day</label>
+<select name=day id=day class=form-select>
+<option value=1>1</option>
+<option value=2>2</option>
+<option value=3>3</option>
+<option value=4>4</option>
+<option value=5>5</option>
+<option value=6>6</option>
+<option value=7>7</option>
+<option value=8>8</option>
+<option value=9>9</option>
+<option value=10>10</option>
+<option value=11>11</option>
+<option value=12>12</option>
+<option value=13>13</option>
+<option value=14>14</option>
+<option value=15>15</option>
+<option value=16>16</option>
+<option value=17>17</option>
+<option value=18>18</option>
+<option value=19>19</option>
+<option value=20>20</option>
+<option value=21>21</option>
+<option value=22>22</option>
+<option value=23>23</option>
+<option value=24>24</option>
+<option value=25>25</option>
+<option value=26>26</option>
+<option value=27>27</option>
+<option value=28>28</option>
+<option value=29>29</option>
+<option value=30>30</option>
+<option value=31>31</option>
+</select>
+</div>
+</div>
+<div class=col>
+<div class=mb-4>
+<label class="mb-2 font-light" for=time>Time</label>
+<select name=time id=time class=form-select>
+<option value=9_to_10>9:00 to 10:00 - AM</option>
+<option value=10_to_11>10:00 to 11:00 - AM</option>
+<option value=11_to_12>11:00 to 12:00 - AM</option>
+<option value=12_to_1>12:00 to 1:00 - PM</option>
+<option value=1_to_2>1:00 to 2:00 - PM</option>
+<option value=2_to_3>2:00 to 3:00 - PM</option>
+<option value=3_to_4>3:00 to 4:00 - PM</option>
+<option value=4_to_5>4:00 to 5:00 - PM</option>
+<option value=5_to_6>5:00 to 6:00 - PM</option>
+<option value=6_to_7>6:00 to 7:00 - PM</option>
+</select>
+</div>
+</div>
+</div>
+<div class="form-floating mb-5">
+<textarea class=form-control id=exampleFormControlTextarea1 rows=3 placeholder="Type your message here."></textarea>
+<label for=floatingInput>Message</label>
+</div>
+<p class="text-sm font-light opacity-50 mb-4">*Note: Once sent please wait for an hour in response of your appointment.</p>
+<button type=submit class="border-2 border-black px-4 py-2 w-100 uppercase mb-3 text-lg tracking-widest hover:text-white hover:bg-stone-800 duration-300">Send</button>
+</form>
+</div>
+</div>
+</div>
+</div>
 </section>
 </body>
 </html>

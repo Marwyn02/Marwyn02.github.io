@@ -1,267 +1,210 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang=en>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UFOTO Self-Portrait Studio | Product</title>
-
-    <meta name="description" content="Self-portrait studio in cavite">
-
-    <!-- Meta Icon  -->
-    <link rel="icon" type="image/ico" href="./public/favicon.ico"/>
-
-    <!-- Meta Keywords -->
-    <meta name="keywords" content="SELF PORTRAIT, PHOTOSHOOT, PHOTOGRAPHY">
-
-    <!-- Meta Author -->
-    <meta name="author" content="Jhun Marwyn Sumargo">
-
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-
-    
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-    <!-- Icon  -->
-    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
-
+<meta charset=UTF-8>
+<meta http-equiv=X-UA-Compatible content="IE=edge">
+<meta name=viewport content="width=device-width, initial-scale=1.0">
+<title>UFOTO Self-Portrait Studio | Product</title>
+<meta name=description content="Self-portrait studio in cavite">
+<link rel=icon type=image/ico href="./public/favicon.ico"/>
+<meta name=keywords content="SELF PORTRAIT, PHOTOSHOOT, PHOTOGRAPHY">
+<meta name=author content="Jhun Marwyn Sumargo">
+<script src=https://cdn.tailwindcss.com></script>
+<link href=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css rel=stylesheet integrity=sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor crossorigin=anonymous>
+<script src=https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js integrity=sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 crossorigin=anonymous></script>
+<link rel=stylesheet href=style.css>
+<link href=https://unpkg.com/aos@2.3.1/dist/aos.css rel=stylesheet>
+<script src=https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js></script>
+<link rel=stylesheet href=https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css>
 </head>
 <body>
-    <!-- Navbar  -->
-    <div class="sticky top-0 z-10">
-        <nav class="navbar navbar-expand-lg w-full d-flex flex-wrap align-items-center justify-content-start justify-content-md-center
-           hover:bg-white hover:duration-500 justify-content-md-between border-bottom py-lg-0">
-           
-            <button class="navbar-toggler border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-                <ul class="navbar-nav d-flex col-12 col-md-3 mb-2 mb-md-0 align-items-center
-                order-2 order-sm-1 text-decoration-none uppercase pl-16 tracking-widest text-sm d-none d-lg-flex">
-                    <li>
-                        <a href="index.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300">Home</a>
-                    </li>
-                    <li>
-                        <a href="product.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-stone-500">Photos</a>
-                    </li>
-                    <li>
-                        <a href="contact.html" class="nav-link py-9 mx-2 link-secondary border-b-2
-                        border-transparent hover:border-stone-500 duration-300">Contact</a>
-                    </li>
-                </ul>
-                <a href="index.html" class="text-decoration-none justify-content-center 
-                order-1 order-sm-2 col-md-auto mb-2 col-12 mb-md-0 d-none d-lg-block 
-                py-8 text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold
-                duration-300">UFOTO</a>
-                <div class="col-md-3 text-end pr-20 order-3 d-none d-lg-block">
-                    <a href="booking.html" class="uppercase py-9 link-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300 px-2
-                    text-sm tracking-widest">Book now</a>
-                </div>
-        </nav>
-    </div>
-
-    <!-- Offcanvas  -->
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-        <div class="offcanvas-header pb-0">
-          <h5 class="offcanvas-title text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold
-          duration-300 cursor-pointer" id="offcanvasExampleLabel">UFOTO</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
-            <img src="./public/utility-images/Close-button2.png" alt="close-button">
-          </button>
-        </div>
-        <div class="offcanvas-body">
-          <nav class="navbar py-0">
-            <ul class="navbar-nav py-1 uppercase tracking-widest text-sm">
-                <li>
-                    <a href="index.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Home</a>
-                </li>
-                <li>
-                    <a href="product.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Photos</a>
-                </li>
-                <li>
-                    <a href="contact.html" class="nav-link pb-1 ink-secondary border-b-2
-                    border-transparent hover:border-stone-500 duration-300">Contact</a>
-                </li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <!-- End of Offcanvas  -->
-
-
-<!-- End of navbar  -->
-
-<section class="row align-items-center mt-12 mb-3">
-    <div class="col-12 justify-content-center text-center mb-1">
-        <button class="text-stone-600 border-2 border-stone-500 hover:border-stone-800 
-        rounded-full px-4 py-1.5 duration-500 uppercase text-xs mb-1" id="btn1">Solo Package</button>
-
-        <button class="text-stone-600 border-2 border-stone-100 hover:border-stone-800 
-        rounded-full px-4 py-1.5 mx-md-5 duration-500 uppercase text-xs" id="btn3">Duo Package</button>
-
-        <button class="text-stone-600 border-2 border-stone-100 hover:border-stone-500 
-        rounded-full px-4 py-1.5 duration-500 uppercase text-xs" id="btn2">Group Package</button>
-    </div>
-    <!-- End of price lists buttons  -->
-
-    <!-- Studio rental  -->
-    <div class="container" id="studiorental">
-        <div class="row align-items-center">
-            <div class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
-                <h1 class="text-stone-500 text-center uppercase tracking-wider">Studio Rental</h1>
-                <p class="text-sm text-center font-light italic text-stone-800">for Photoshoots</p>
-
-                <div class="px-5 md:px-1 mb-3 pb-3 mx-4 mt-5">
-                    <h4 class="font-bold text-lg">On Weekdays<span class="text-center float-end pr-2 pe-lg-4">750/hr</span></h4>
-                    <div class="font-light text-sm">
-                        <p class="-mt-2">monday-thursday</p>
-                        <p class="-my-1.5">3 hours minimum</p>
-                        <p>650 for every succeeding hour</p>
-                    </div>
-                </div>
-                <div class="px-5 pb-3 mx-4 mb-4">
-                    <h4 class="font-bold text-lg">On Weekends<span class="text-center float-end pr-2 pe-lg-4">900/hr</span></h4>
-                    <div class="font-light text-sm">
-                        <p class="-mt-2">friday-sunday</p>
-                        <p class="-my-1.5">3 hours minimum</p>
-                        <p>850 for every succeeding hour</p>
-                    </div>
-                </div>
-                <div class="text-center">
-                    <p class="font-bold mb-3.5 mt-5">Inclusions</p>
-                    <p class="leading-4 font-light text-sm mb-20">fully air-condtioned <br>
-                    maximum of 10 persons <br>
-                    exclusive use of studio & receiving area <br>
-                    use of available backdrop & posing boxes <br>
-                    wifi available <br>
-                    street parking only</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End of studio rental  -->
-
-
-    <!-- Adds on -->
-    <div class="container" id="addson">
-        <div class="row align-items-center">
-            <div id="price-2" class="col justify-content-center md:px-28 lg:px-44 xl:px-80">
-                <h1 class="text-stone-500 text-center uppercase tracking-wider">Add Ons</h1>
-
-                <div class="px-5 md:px-1 mx-4 mb-4 mt-5">
-                    <h4 class="font-bold text-lg">Extra Print<span class="text-center float-end pr-2 pe-lg-4">50</span></h4>
-                </div>
-                <div class="px-5 md:px-1 mx-4 mb-4">
-                    <h4 class="font-bold text-lg">Extra Head<span class="text-center float-end  pr-2 pe-lg-4">250</span></h4>
-                </div>
-                <div class="px-5 md:px-1 mx-4 mb-4">
-                    <h4 class="font-bold text-lg">Extra Kid<span class="text-center float-end  pr-2 pe-lg-4">200</span></h4>
-                    <div class="font-light text-sm">
-                        <p class="-mt-2">below 12y/o</p>
-                        <p class="-my-1.5">3y/o & below are free</p>
-                    </div>
-                </div>
-                <div class="px-5 md:px-1 mx-4 mb-4">
-                    <h4 class="font-bold text-lg">Extra Pet<span class="text-center float-end  pr-2 pe-lg-4">100</span></h4>
-                </div>
-                <div class="px-5 md:px-1 mx-4 mb-4">
-                    <h4 class="font-bold text-lg">Facial Enhancement<span class="text-center float-end  pr-2 pe-lg-4">150</span></h4> 
-                    <div class="font-light text-sm">
-                        <p class="-mt-2">basic retouching</p>
-                        <p class="-my-1.5">applies to all prints only</p>
-                    </div>
-                </div>
-                <div class="px-5 md:px-1 mx-4 mb-4">
-                    <h4 class="font-bold text-lg">Soft Copy <span class="text-sm">(RAW)</span> <span class="text-center float-end  pr-2 pe-lg-4">350</span></h4>
-                    <div class="font-light text-sm">
-                        <p class="-mt-2">all original photos</p>
-                        <p class="-my-1.5">sent through airdrop/email</p>
-                    </div>
-                </div>
-                <div class="px-5 md:px-1 mx-4 mb-4">
-                    <h4 class="font-bold text-lg">Enhanced Soft Copy<span class="text-center float-end  pr-2 pe-lg-4">+150</span></h4> 
-                    <div class="font-light text-sm">
-                        <p class="-mt-2">all original photos will be enhanced</p>
-                        <p class="-my-1.5">sent through email within a week</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="product-section">
-    <div id="selfportrait" class="col-12 bg-white p-3">
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img1.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img4.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img7.jpeg" alt="">
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img3.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img5.jpeg" alt="">
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#product-section" class="pop">
-                        <img class="img-fluid" id="imageresource" src="./public/images/img8.jpeg" alt="">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Photo's modal  -->
-<div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-    <div class="modal-dialog" data-dismiss="modal">
-      <div class="modal-content position-relative"> 
-        <div class="modal-header border-0 pb-0 mr-3">
-            <button id="modal-close" type="button" class="btn-close h-5 w-5" data-bs-dismiss="modal" aria-label="Close">
-                <img src="./public/utility-images/Close-button2.png" alt="">
-            </button>
-        </div>    
-        <div class="modal-body">
-             <img src="" class="imagepreview" style="width: 100%;" >
-        </div>       
-      </div>
-    </div>
+<div class="sticky top-0 z-10">
+<nav class="navbar navbar-expand-lg w-full d-flex flex-wrap align-items-center justify-content-start justify-content-md-center hover:bg-white hover:duration-500 justify-content-md-between border-bottom py-lg-0">
+<button class="navbar-toggler border-0" type=button data-bs-toggle=offcanvas data-bs-target=#offcanvasExample aria-controls=offcanvasExample aria-expanded=false aria-label="Toggle navigation">
+<span class=navbar-toggler-icon></span>
+</button>
+<ul class="navbar-nav d-flex col-12 col-md-3 mb-2 mb-md-0 align-items-center order-2 order-sm-1 text-decoration-none uppercase pl-16 tracking-widest text-sm d-none d-lg-flex">
+<li>
+<a href=index.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Home</a>
+</li>
+<li>
+<a href=product.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-stone-500">Photos</a>
+</li>
+<li>
+<a href=contact.html class="nav-link py-9 mx-2 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Contact</a>
+</li>
+</ul>
+<a href=index.html class="text-decoration-none justify-content-center order-1 order-sm-2 col-md-auto mb-2 col-12 mb-md-0 d-none d-lg-block py-8 text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold duration-300">UFOTO</a>
+<div class="col-md-3 text-end pr-20 order-3 d-none d-lg-block">
+<a href=booking.html class="uppercase py-9 link-secondary border-b-2 border-transparent hover:border-stone-500 duration-300 px-2 text-sm tracking-widest">Book now</a>
 </div>
-
-<script src="product.js"></script>
-
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-<script> AOS.init(); </script>
+</nav>
+</div>
+<div class="offcanvas offcanvas-start" tabindex=-1 id=offcanvasExample aria-labelledby=offcanvasExampleLabel>
+<div class="offcanvas-header pb-0">
+<h5 class="offcanvas-title text-xl tracking-widest text-stone-800 hover:text-stone-500 font-bold duration-300 cursor-pointer" id=offcanvasExampleLabel>UFOTO</h5>
+<button type=button class=btn-close data-bs-dismiss=offcanvas aria-label=Close>
+<img src=./public/utility-images/Close-button2.png alt=close-button>
+</button>
+</div>
+<div class=offcanvas-body>
+<nav class="navbar py-0">
+<ul class="navbar-nav py-1 uppercase tracking-widest text-sm">
+<li>
+<a href=index.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Home</a>
+</li>
+<li>
+<a href=product.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Photos</a>
+</li>
+<li>
+<a href=contact.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Contact</a>
+</li>
+<li>
+<a href=booking.html class="nav-link pb-1 ink-secondary border-b-2 border-transparent hover:border-stone-500 duration-300">Book</a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+<section class="row align-items-center mt-12 mb-3">
+<div class="col-12 justify-content-center text-center mb-1">
+<button class="text-stone-600 border-2 border-stone-500 hover:border-stone-800 rounded-full px-4 py-1.5 duration-500 uppercase text-xs mb-1" id=btn1>Solo Package</button>
+<button class="text-stone-600 border-2 border-stone-100 hover:border-stone-800 rounded-full px-4 py-1.5 mx-md-5 duration-500 uppercase text-xs" id=btn3>Duo Package</button>
+<button class="text-stone-600 border-2 border-stone-100 hover:border-stone-500 rounded-full px-4 py-1.5 duration-500 uppercase text-xs" id=btn2>Group Package</button>
+</div>
+<section id=product-section>
+<div id=solo class="col-12 bg-white p-3">
+<div class=container>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img1-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img4-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img7-min.jpeg alt>
+</a>
+</div>
+</div>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img3-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img5-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/img8-min.jpeg alt>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id=duo class="col-12 bg-white p-3">
+<div class=container>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/imgduo1-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/imgduo2-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/imgduo3-min.jpeg alt>
+</a>
+</div>
+</div>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/imgduo6-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/imgduo5-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Duo/imgduo4-min.jpeg alt>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id=group class="col-12 bg-white p-3">
+<div class=container>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Group/imggroup1-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Group/imggroup2-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Group/imggroup3-min.jpeg alt>
+</a>
+</div>
+</div>
+<div class=row>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Group/imggroup4-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Group/imggroup5-min.jpeg alt>
+</a>
+</div>
+<div class=col>
+<a href=#product-section class=pop>
+<img class=img-fluid id=imageresource src=./public/images/Group/imggroup6-min.jpeg alt>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<div class="modal fade" id=imagemodal tabindex=-1 role=dialog aria-labelledby=myModalLabel aria-hidden=true>
+<div class=modal-dialog data-dismiss=modal>
+<div class="modal-content position-relative">
+<div class="modal-header border-0 pb-0 mr-3">
+<button id=modal-close type=button class="btn-close h-5 w-5" data-bs-dismiss=modal aria-label=Close>
+<img src=./public/utility-images/Close-button2.png alt>
+</button>
+</div>
+<div class=modal-body>
+<img src class=imagepreview style=width:100%>
+</div>
+</div>
+</div>
+</div>
+<script src=product.js></script>
+<script src=https://unpkg.com/aos@2.3.1/dist/aos.js></script>
+<script>AOS.init();</script>
 </body>
 </html>
